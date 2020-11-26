@@ -6,7 +6,7 @@ const port = 3000
 app.use(function (req, res, next) {
   const time = new Date()
   const options = { hour12: false }
-  let nowTime = time.toLocaleString('zh-TW', options)
+  const nowTime = time.toLocaleString('zh-TW', options)
   console.log(`${nowTime} | ${req.method} from ${req.originalUrl}`)
   next();
 });
